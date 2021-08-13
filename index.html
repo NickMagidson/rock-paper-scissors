@@ -52,17 +52,25 @@
         } else if (playerSelection == 'paper' && computerSelection == 'rock') {
             return "Congrats! You won!";
         } else {
-            return "Something went wrong";
+            return "Something went wrong.";
         }
 
         //Scissors
-
+        if (playerSelection == 'scissors' && computerSelection == 'scissors') {
+            return "It's a tie!";
+        } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+            return "Congrats! You won!";
+        } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+            return "Sorry. You lost!";
+        } else {
+            return "Something went wrong.";
+        }
 
     }
 
 
     //Executes play round
-    console.log(playRound('rock', computerPlay()));
+    // console.log(playRound('rock', computerPlay()));
 
 
 
