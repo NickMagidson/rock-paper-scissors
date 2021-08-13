@@ -16,6 +16,14 @@
     // computerPlay will genereate one of the three
     // playRound will cycle through if/else statements(3) to retrun wins and loses.
 
+
+    function userChoice() {
+        const userChoice = prompt("Let's play Rock, Paper, Scissors!").toLowerCase();
+        return userChoice;
+    }
+
+
+
     function computerPlay() {
         let compChoice = Math.random();
         if (compChoice < 0.34) {
@@ -30,7 +38,7 @@
 
 
     // Generates a random play
-    console.log(computerPlay());
+    //console.log(computerPlay());
 
     function playRound(playerSelection, computerSelection) {
         //Rock
@@ -40,23 +48,13 @@
             return "Sorry. You lost!";
         } else if (playerSelection == 'rock' && computerSelection == 'rock') {
             return "It's a tie!";
-        } else {
-            return "Something went wrong.";
-        }
-
-        //Paper
-        if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
             return "Sorry. You lost!";
         } else if (playerSelection == 'paper' && computerSelection == 'paper') {
             return "It's a tie!";
         } else if (playerSelection == 'paper' && computerSelection == 'rock') {
             return "Congrats! You won!";
-        } else {
-            return "Something went wrong.";
-        }
-
-        //Scissors
-        if (playerSelection == 'scissors' && computerSelection == 'scissors') {
+        } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
             return "It's a tie!";
         } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
             return "Congrats! You won!";
@@ -70,7 +68,9 @@
 
 
     //Executes play round
-    // console.log(playRound('rock', computerPlay()));
+    //console.log(userChoice);
+    console.log(computerPlay());
+    console.log(playRound(userChoice(), computerPlay()));
 
 
 
