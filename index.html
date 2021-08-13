@@ -18,8 +18,33 @@
 
     function computerPlay() {
         let compChoice = Math.random();
-        return console.log(compChoice);
+        if (compChoice < 0.34) {
+            compChoice = "rock";
+        } else if (compChoice <= 0.67) {
+            compChoice = 'paper';
+        } else {
+            compChoice = "scissors";
+        }
+        return compChoice;
     }
+
+    console.log(computerPlay());
+
+    function playRound(playerSelection, computerSelection) {
+        //Rock
+        if (playerSelection == 'rock' && computerSelection == 'scissors') {
+            return "Congrats! You won!";
+        } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+            return "Sorry. You lost!";
+        } else if (playerSelection == 'rock' && computerSelection == 'rock') {
+            return "It's a tie!"
+        } else {
+            return "Something went wrong."
+        }
+    }
+
+    console.log(playRound('rock', computerPlay()));
+
 
 
 
