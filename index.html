@@ -28,6 +28,8 @@
         return compChoice;
     }
 
+
+    // Generates a random play
     console.log(computerPlay());
 
     function playRound(playerSelection, computerSelection) {
@@ -37,12 +39,29 @@
         } else if (playerSelection == 'rock' && computerSelection == 'paper') {
             return "Sorry. You lost!";
         } else if (playerSelection == 'rock' && computerSelection == 'rock') {
-            return "It's a tie!"
+            return "It's a tie!";
         } else {
-            return "Something went wrong."
+            return "Something went wrong.";
         }
+
+        //Paper
+        if (playerSelection == 'paper' && computerSelection == 'scissors') {
+            return "Sorry. You lost!";
+        } else if (playerSelection == 'paper' && computerSelection == 'paper') {
+            return "It's a tie!";
+        } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+            return "Congrats! You won!";
+        } else {
+            return "Something went wrong";
+        }
+
+        //Scissors
+
+
     }
 
+
+    //Executes play round
     console.log(playRound('rock', computerPlay()));
 
 
