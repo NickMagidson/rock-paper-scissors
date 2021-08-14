@@ -28,7 +28,7 @@
         let compChoice = Math.floor(Math.random() * 3)
         if (compChoice < 1) {
             compChoice = "rock";
-        } else if (compChoice <= 2) {
+        } else if (compChoice = 2) {
             compChoice = "paper";
         } else {
             compChoice = "scissors";
@@ -38,45 +38,58 @@
 
 
     // Generates a random play
-    //console.log(computerPlay());
+    
 
 
     //function game()
 
 
-    function playRound(playerSelection, computerSelection) {
-        //Rock
-        if (playerSelection == "rock" && computerSelection == "scissors") {
-            return "Congrats! You won!";
-        } else if (playerSelection == "rock" && computerSelection == "paper") {
-            return "Sorry. You lost!";
-        } else if (playerSelection == "rock" && computerSelection == "rock") {
-            return "It's a tie!";
-        } else if (playerSelection == "paper" && computerSelection == "scissors") {
-            return "Sorry. You lost!";
-        } else if (playerSelection == "paper" && computerSelection == "paper") {
-            return "It's a tie!";
-        } else if (playerSelection == "paper" && computerSelection == "rock") {
-            return "Congrats! You won!";
-        } else if (playerSelection == "scissors" && computerSelection == "scissors") {
-            return "It's a tie!";
-        } else if (playerSelection == "scissors" && computerSelection == "paper") {
-            return "Congrats! You won!";
-        } else if (playerSelection == "scissors" && computerSelection == "rock") {
-            return "Sorry. You lost!";
-        } else {
-            return "Something went wrong.";
+    function playRound(userChoice, compChoice) {
+        //Rock Choice
+        if (userChoice == "rock") {
+            if (compChoice == "scissors") {
+                return "You Win! rock beats scissors!";
+            } else if (compChoice == "paper") {
+                return "Loser! paper Beats rock";
+            } else if (compChoice == "rock") {
+                return "It's a Draw";
+            } else {
+                return "Something Went Wrong";
+            }
         }
-
-    }
+        //paper Choice
+        else if (userChoice == "paper") {
+            if (compChoice == "rock") {
+                return "You Win! paper beats rock";
+            } else if (compChoice == "scissors") {
+                return "You Lose! scissors beats paper";
+            } else if (compChoice == "paper") {
+                return "It's a Draw";
+            } else {
+                return "Something Went Wrong";
+            }
+        }
+        //scissors Choice
+        else if (userChoice == "scissors") {
+            if (compChoice == "paper") {
+                return "You win! scissors beat paper";
+            } else if (userChoice == "scissors" && compChoice == "rock") {
+                return "You Lose! rock beats scissors";
+            } else if (userChoice == "scissors" && compChoice == "scissors") {
+                return "It's a Draw";
+            } else {
+                return "Something Went Wrong";
+            }
+        } else {
+            return "That's not a valid choice";
+        }
+        }
 
 
     //Executes play round
     //console.log(userChoice);
     
     console.log(playRound(userChoice(), computerPlay()));
-    console.log(computerPlay());
-
 
 
 
