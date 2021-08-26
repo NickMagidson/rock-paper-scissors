@@ -11,6 +11,7 @@
     // }
 
 
+
     // Computer makes a random play
     function computerPlay() {
         let compChoice = Math.floor(Math.random() * 3) // Generates random num. 0 through 3.
@@ -67,6 +68,13 @@
         }
         }
 
+
+
+    const rockButton = document.querySelector('rock-button');
+    const paperButton = document.querySelector('paper-button');
+    const scissorsButton = document.querySelector('scissors-button');
+
+
     
     // Executes a play
-    console.log(playRound(userChoice(), computerPlay()));
+    //console.log(playRound(userChoice(), computerPlay()));
