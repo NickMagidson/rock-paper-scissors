@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div id="container">
+        <button class="rock-button">Rock</button>
+        <button class="paper-button">Paper</button>
+        <button class="scissors-button">Scissors</button>
+
+
+    </div>
     
 <script>
 
@@ -17,10 +25,10 @@
 
 
     // Inputs the users choice
-    function userChoice() {
-        const userChoice = prompt("Let's play Rock, Paper, Scissors!").toLowerCase(); // Summons prompt
-        return userChoice; // Returns prompt
-    }
+    // function userChoice() {
+    //     const userChoice = prompt("Let's play Rock, Paper, Scissors!").toLowerCase(); // Summons prompt
+    //     return userChoice; // Returns prompt
+    // }
 
 
     // Computer makes a random play
@@ -83,6 +91,14 @@
     // Executes a play
     console.log(playRound(userChoice(), computerPlay()));
 
+   const container = document.querySelectorAll('#container');
+
+   const button = document.createElement('button');
+   button.classList.add('rock');
+   button.style.border = '1px solid black';
+   button.style.backgroundColor = 'lightBlue';
+   button.textContent = "Rock";
+   container.appendChild(button);
 
 
 </script>
