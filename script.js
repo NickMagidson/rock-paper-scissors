@@ -1,7 +1,17 @@
+let playerChoice;
+let computerChoice = {Value: ""};
+let playerChoiceInt = 0;
+let computerChoiceInt = 0;
+const buttons = document.querySelectorAll('.myButton');
 
 let playerScore = 0;
-let computerScore = 0;
+let compScore = 0;
 
+const player = document.querySelector("#player-score");
+player.textContent = `Player Score: ${playerScore}`;
+
+const computer = document.querySelector("#computer-score");
+computer.textContent = `Computer Score: ${compScore}`;
 
 
 
@@ -71,15 +81,6 @@ let computerScore = 0;
         }
 
 
-
-    const rockButton = document.querySelector('.rock-button');
-    const paperButton = document.querySelector('.paper-button');
-    const scissorsButton = document.querySelector('.scissors-button');
-
-    const buttons = document.querySelectorAll('.myButton');
-    // buttons.forEach((button)=>{button.addEventListener('click',()=> {
-
-    // }
 
     console.log(rockButton);
     
