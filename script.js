@@ -1,14 +1,15 @@
-// The computer should generate 3 things. Rock, Paper, Scissors.
-    // If player uses a certain one, should either win, lose, or tie.
-    // computerPlay will genereate one of the three
-    // playRound will cycle through if/else statements(3) to retrun wins and loses.
+
+let playerScore = 0;
+let computerScore = 0;
+
+
 
 
     // Inputs the users choice
-    // function userChoice() {
-    //     const userChoice = prompt("Let's play Rock, Paper, Scissors!").toLowerCase(); // Summons prompt
-    //     return userChoice; // Returns prompt
-    // }
+    function userChoice() {
+        const userChoice = prompt("Let's play Rock, Paper, Scissors!").toLowerCase(); // Summons prompt
+        return userChoice; // Returns prompt
+    }
 
 
 
@@ -25,6 +26,7 @@
         return compChoice;
     }
 
+  
 
     // Plays a round.
     function playRound(userChoice, compChoice) {
@@ -70,11 +72,16 @@
 
 
 
-    const rockButton = document.querySelector('rock-button');
-    const paperButton = document.querySelector('paper-button');
-    const scissorsButton = document.querySelector('scissors-button');
+    const rockButton = document.querySelector('.rock-button');
+    const paperButton = document.querySelector('.paper-button');
+    const scissorsButton = document.querySelector('.scissors-button');
 
+    const buttons = document.querySelectorAll('.myButton');
+    // buttons.forEach((button)=>{button.addEventListener('click',()=> {
 
+    // }
+
+    console.log(rockButton);
     
     // Executes a play
     //console.log(playRound(userChoice(), computerPlay()));

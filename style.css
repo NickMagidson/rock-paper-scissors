@@ -1,3 +1,32 @@
+html {
+    font-size: 20px;
+    background-size: 100% 100%;
+    
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.text-line {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+.text {
+    margin: 50px;
+}
+
+
+
+
 .myButton {
 	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
