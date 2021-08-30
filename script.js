@@ -91,14 +91,7 @@ function playGame() {
 
 
 
-
-
-
-
-
-
-
-
+    // Old code
     // // Inputs the users choice
     // function userChoice() {
     //     const userChoice = prompt("Let's play Rock, Paper, Scissors!").toLowerCase(); // Summons prompt
