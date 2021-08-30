@@ -1,5 +1,5 @@
-let playerChoice;
 let computerChoice = {Value: ""};
+let playerChoice;
 let playerChoiceInt = 0;
 let computerChoiceInt = 0;
 const buttons = document.querySelectorAll('.myButton');
@@ -65,6 +65,27 @@ function playRound() {
     } else if (result == 2) {
         output.textContent = `You lost! You chose ${playerChoice} and The computer chose ${computerChoice.Value}`;
         compScore++;
+    }
+}
+
+function playGame() {
+    output.textContent = "Choose Rock, Paper, or Scissors";
+    playRound();
+    player.textContent = `Player Score: ${playerScore}`;
+    computer.textContent = `Computer Score: ${compScore}`;
+    if (playerScore == 5) {
+        output.textContent = "Congratulations! You won the game!"
+        playerScore = 0;
+        compScore = 0;
+        player.textContent = `Player Score: ${playerScore}`;
+        computer.textContent = `Computer Score: ${compScore}`;
+    }
+    else if (compScore == 5) {
+        output.textContent = "Sorry! You lost the game."
+        playerScore = 0;
+        compScore = 0;
+        player.textContent = `Player Score: ${playerScore}`;
+        computer.textContent = `Computer Score: ${compScore}`;
     }
 }
 
