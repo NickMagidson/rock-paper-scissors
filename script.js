@@ -38,12 +38,12 @@ buttons.forEach((button)=>{button.addEventListener('click', ()=>{
  // Computer makes a random play
 function computerPlay() {
     let compChoice = Math.floor(Math.random() * 3) // Generates random num. 0 through 3.
-    if (compChoice < 1) {
-        compChoice = "rock";
-    } else if (compChoice = 2) {
-        compChoice = "paper";
-    } else {
-        compChoice = "scissors";
+    if (compChoice == 0) {
+        compChoice.Value = "=rock";
+    } else if (compChoice == 1) {
+        compChoice.Value = "paper";
+    } else if (compChoice == 2) {
+        compChoice.Value = "scissors";
     }
     return compChoice;
  }
