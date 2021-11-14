@@ -13,13 +13,14 @@ body{
 }
 
 @font-face {
-    font-family: myFirstFont;
-    src: url('madness hyperactive.otf');
+    font-family: madness hyperactive;
+    src: url('./Madness\ Hyperactive.otf');
   }
 
 h1 {
     font-size: 100px;
     margin-top: 2px;
+    letter-spacing: 5px;
 }
 
 h2 {
